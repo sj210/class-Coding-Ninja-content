@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+            background-color: red;
+            color:white;
+            text-align: center;
+            font-size: 22px;
+            display: none;
+        }
+        @media(min-width:400px){
+            #box-1{
+                display: block;
+            }
+        }
+        @media(min-width:450px) and (max-width:600px){
+            #box-2{
+                display: block;
+                background-color: teal;
+            }
+        }
+        @media(max-width:1000px){
+            #box-3{
+                display: block;
+            }
+        }
+        @media only screen {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">This is a first div</div>
+    <div class="box" id="box-2">This is a second div</div>
+    <div class="box" id="box-3">This is a Third div</div>
+    <div class="box" id="box-4">This is a fourth div</div> 
+</body>
+</html>
+
+
+
+<!-- div.box#box-$*4 -->

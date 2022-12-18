@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Intro to tables and css</title>
+    <style>
+        table,th,td{
+            border:1px solid black;
+            border-collapse: separate;
+            border-spacing: 5px;
+            border-radius: 5px;
+        }
+        th,td{
+            border-color: violet;
+            padding:10px;
+        }
+        tr:nth-child(even){
+            background-color: aqua;
+        }
+        td:hover{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <table>
+        <colgroup>
+            <col span="2" style="background-color:red">
+            <col span="1" style="background-color:yellow" >
+        </colgroup>
+        <thead>
+        <tr>
+            <th rowspan="2"> No </th>
+            <th colspan="2"> Name </th>
+            <th> batch </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 1 </td>
+            <td> Kunal </td>
+            <td> july </td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td> Arihant </td>
+            <td> may </td>
+        </tr>
+        <tr>
+            <td> 3 </td>
+            <td> haan </td>
+            <td> july </td>
+        </tr>
+        <tr>
+            <td> 4 </td>
+            <td> solo </td>
+            <td> may </td>
+        </tr>
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+    </table>
+
+    <a href="tel:+96790004">+96790004</a>
+    <a href="mailto:someone@example.com">Send Email</a>
+    <a href="#section2">Go to the section</a>
+
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/URCbWrdFTMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>
