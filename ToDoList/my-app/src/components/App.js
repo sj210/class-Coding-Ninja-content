@@ -4,20 +4,20 @@ import ToDoMain from './ToDoMain';
 
 
 function App() {
-  // let time = new Date().toLocaleTimeString()
+  let time = new Date().toLocaleTimeString()
 
-  // const [currentTime, setCurrentTime] = useState(time);
+  const [currentTime, setCurrentTime] = useState(time);
 
-  // const updateTime = () => {
-  //   time = new Date().toLocaleTimeString();
-  //   setCurrentTime(time);
-  // }
+  const updateTime = () => {
+    time = new Date().toLocaleTimeString();
+    setCurrentTime(time);
+  }
 
-  // setInterval(updateTime, 1000);
+  setInterval(updateTime, 1000);
 
   return (
     <div className="App">
-      {/* <h1> {currentTime}</h1> */}
+      <h1> {currentTime}</h1>
       <ToDoMain/>
     </div>
   );
