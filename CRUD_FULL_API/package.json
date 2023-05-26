@@ -1,0 +1,30 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Node app ",
+  "main": "index.js",
+  "scripts": {
+    "start": " nodemon index.js",
+    "test": "jest --coverage --all"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Anshu",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "express-async-handler": "^1.2.0",
+    "express-validator": "^6.14.3",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.8.3",
+    "redis": "^4.6.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1",
+    "supertest": "^6.3.3"
+  }
+}

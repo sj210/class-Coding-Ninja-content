@@ -1,0 +1,22 @@
+name: Node CRUD APIs Github Action JUNE 10
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: use Node
+
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependency
+        run: npm install
+      - name: Run test
+        run: npm run test
+      
+
