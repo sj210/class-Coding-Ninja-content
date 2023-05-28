@@ -12,15 +12,15 @@ module.exports.createUser = async(req, res, next) => {
   const {name, email, password} = req.body;
   const errors = validationResult(req);
 
-  // if(!errors.isEmpty()) {
-  //   throw new BadRequest("Bad request", errors);
-  // }
+  if(!errors.isEmpty()) {
+    throw new BadRequest("Bad request", errors);
+  }
 
   // We should not store password in plain text we should hash the passwords and store hashed password 
   //in our db  // bcrypt 
-    if(_.isEmpty(email) || _.isEmpty(name) || _.isEmpty(password)) {
-      throw new BadRequest("Invalid data");
-    }
+    // if(_.isEmpty(email) || _.isEmpty(name) || _.isEmpty(password)) {
+    //   throw new BadRequest("Invalid data");
+    // }
     
   const user = await User.create({name, password, email});
   return res.status(201).json({

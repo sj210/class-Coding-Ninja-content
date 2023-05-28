@@ -1,18 +1,20 @@
-const CustomError = require('./custom-error');
-module.exports = class BadRequest extends CustomError {
-    statusCode= 400;
-    reason = 'Bad request';
-    errors = []
-    constructor(msg) {
-        super(msg);
-       
-         Object.setPrototypeOf(BadRequest, CustomError.prototype);
-    };
+const CustomError = require("./custom-error");
 
-    seralizeError (err) {
-        return [{
-            ...err,
-            msg: this.reason
-        }]
-    }
+module.exports = class BadRequest extends CustomError {
+  statusCode = 400;
+  reason = 'Bad Request';
+
+  constructor(msg,errors) {
+    super(msg);
+    this.msg = msg;
+    this.errors = errors;
+    Object.setPrototypeOf(BadRequest, CustomError.prototype);
+  }
+
+  serializeError() {
+    return [{
+      errors: this.errors ?? [],
+      msg: this.msg ?? this.reason
+    }];
+  }
 };
